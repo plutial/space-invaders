@@ -233,6 +233,78 @@ update_mappings/fast:
 	$(MAKE) $(MAKESILENT) -f raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build.make raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
+src/bullet.o: src/bullet.c.o
+.PHONY : src/bullet.o
+
+# target to build an object file
+src/bullet.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/bullet.c.o
+.PHONY : src/bullet.c.o
+
+src/bullet.i: src/bullet.c.i
+.PHONY : src/bullet.i
+
+# target to preprocess a source file
+src/bullet.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/bullet.c.i
+.PHONY : src/bullet.c.i
+
+src/bullet.s: src/bullet.c.s
+.PHONY : src/bullet.s
+
+# target to generate assembly for a file
+src/bullet.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/bullet.c.s
+.PHONY : src/bullet.c.s
+
+src/collisions.o: src/collisions.c.o
+.PHONY : src/collisions.o
+
+# target to build an object file
+src/collisions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/collisions.c.o
+.PHONY : src/collisions.c.o
+
+src/collisions.i: src/collisions.c.i
+.PHONY : src/collisions.i
+
+# target to preprocess a source file
+src/collisions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/collisions.c.i
+.PHONY : src/collisions.c.i
+
+src/collisions.s: src/collisions.c.s
+.PHONY : src/collisions.s
+
+# target to generate assembly for a file
+src/collisions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/collisions.c.s
+.PHONY : src/collisions.c.s
+
+src/enemy.o: src/enemy.c.o
+.PHONY : src/enemy.o
+
+# target to build an object file
+src/enemy.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/enemy.c.o
+.PHONY : src/enemy.c.o
+
+src/enemy.i: src/enemy.c.i
+.PHONY : src/enemy.i
+
+# target to preprocess a source file
+src/enemy.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/enemy.c.i
+.PHONY : src/enemy.c.i
+
+src/enemy.s: src/enemy.c.s
+.PHONY : src/enemy.s
+
+# target to generate assembly for a file
+src/enemy.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/enemy.c.s
+.PHONY : src/enemy.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -256,6 +328,30 @@ src/main.s: src/main.c.s
 src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/main.c.s
 .PHONY : src/main.c.s
+
+src/player.o: src/player.c.o
+.PHONY : src/player.o
+
+# target to build an object file
+src/player.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/player.c.o
+.PHONY : src/player.c.o
+
+src/player.i: src/player.c.i
+.PHONY : src/player.i
+
+# target to preprocess a source file
+src/player.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/player.c.i
+.PHONY : src/player.c.i
+
+src/player.s: src/player.c.s
+.PHONY : src/player.s
+
+# target to generate assembly for a file
+src/player.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/player.c.s
+.PHONY : src/player.c.s
 
 src/sprite.o: src/sprite.c.o
 .PHONY : src/sprite.o
@@ -299,9 +395,21 @@ help:
 	@echo "... glfw"
 	@echo "... raylib"
 	@echo "... space-invaders"
+	@echo "... src/bullet.o"
+	@echo "... src/bullet.i"
+	@echo "... src/bullet.s"
+	@echo "... src/collisions.o"
+	@echo "... src/collisions.i"
+	@echo "... src/collisions.s"
+	@echo "... src/enemy.o"
+	@echo "... src/enemy.i"
+	@echo "... src/enemy.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/player.o"
+	@echo "... src/player.i"
+	@echo "... src/player.s"
 	@echo "... src/sprite.o"
 	@echo "... src/sprite.i"
 	@echo "... src/sprite.s"

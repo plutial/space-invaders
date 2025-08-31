@@ -167,12 +167,12 @@ CMakeFiles/space-invaders.dir/all: raylib/raylib/CMakeFiles/raylib.dir/all
 CMakeFiles/space-invaders.dir/all: raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=32,33,34 "Built target space-invaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=32,33,34,35,36,37,38 "Built target space-invaders"
 .PHONY : CMakeFiles/space-invaders.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/space-invaders.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/plutial/projects/space-invaders/build/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/plutial/projects/space-invaders/build/CMakeFiles 38
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/space-invaders.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/plutial/projects/space-invaders/build/CMakeFiles 0
 .PHONY : CMakeFiles/space-invaders.dir/rule
@@ -184,7 +184,7 @@ space-invaders: CMakeFiles/space-invaders.dir/rule
 # codegen rule for target.
 CMakeFiles/space-invaders.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=32,33,34 "Finished codegen for target space-invaders"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=32,33,34,35,36,37,38 "Finished codegen for target space-invaders"
 .PHONY : CMakeFiles/space-invaders.dir/codegen
 
 # clean rule for target.
@@ -263,7 +263,7 @@ raylib/raylib/external/glfw/src/CMakeFiles/glfw.dir/clean:
 raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build.make raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build.make raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=35 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=39 "Built target update_mappings"
 .PHONY : raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -280,7 +280,7 @@ update_mappings: raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/
 # codegen rule for target.
 raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/build.make raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=35 "Finished codegen for target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/plutial/projects/space-invaders/build/CMakeFiles --progress-num=39 "Finished codegen for target update_mappings"
 .PHONY : raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir/codegen
 
 # clean rule for target.

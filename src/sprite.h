@@ -10,5 +10,5 @@ struct Sprite
     Rectangle src_rect, dst_rect;
 };
 
-struct Sprite CreateSprite(Texture2D texture);
+struct Sprite NewSprite(Texture2D texture);
 void RenderSprite(struct Sprite sprite);

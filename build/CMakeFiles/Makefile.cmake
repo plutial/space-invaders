@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/home/plutial/projects/space-invaders/CMakeLists.txt"
-  "CMakeFiles/4.1.0/CMakeCCompiler.cmake"
-  "CMakeFiles/4.1.0/CMakeCXXCompiler.cmake"
-  "CMakeFiles/4.1.0/CMakeSystem.cmake"
+  "CMakeFiles/4.1.1/CMakeCCompiler.cmake"
+  "CMakeFiles/4.1.1/CMakeCXXCompiler.cmake"
+  "CMakeFiles/4.1.1/CMakeSystem.cmake"
   "/home/plutial/projects/space-invaders/raylib/CMakeLists.txt"
   "/home/plutial/projects/space-invaders/raylib/CMakeOptions.txt"
   "/home/plutial/projects/space-invaders/raylib/cmake/AddIfFlagCompiles.cmake"
