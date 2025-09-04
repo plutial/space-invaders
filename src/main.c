@@ -26,8 +26,11 @@ int main(void)
         // Update
         MovePlayer(&player);
         PlayerAttack(player, &bullets);
-        UpdateBullets(&bullets);
+
         UpdateArmy(&army);
+        ArmyAttack(&army, &bullets);
+
+        UpdateBullets(&bullets);
 
         UpdateCollisions(&player, &bullets, &army);
 

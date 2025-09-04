@@ -7,6 +7,10 @@ struct Bullet
 {
     struct Body body;
     struct Sprite sprite;
+
+    // false -> the player owns the bullet
+    // true  -> the enemy owns the bullet
+    bool owner;
 };
 
 struct BulletArray

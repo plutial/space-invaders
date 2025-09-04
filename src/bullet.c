@@ -74,7 +74,17 @@ void UpdateBullets(struct BulletArray *array)
         {
             // Move the body up
             float speed = 3.0f;
-            array->bullets[i].body.position.y -= speed;
+
+            // If the player owns the bullet, go up to attack the enemy
+            if (!array->bullets[i].owner)
+            {
+                array->bullets[i].body.position.y -= speed;
+            }
+            // If the enemy own the bullet, go down to attack the player
+            else
+            {
+                array->bullets[i].body.position.y += speed;
+            }
 
             // Update the position of the sprite
             array->bullets[i].sprite.dst_rect.x = array->bullets[i].body.position.x;

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "bullet.h"
 #include "entity.h"
 
 enum Direction
@@ -34,3 +35,4 @@ struct Army
 struct Army NewArmy();
 void UpdateArmy(struct Army *army);
 void RenderArmy(struct Army *army);
+void ArmyAttack(struct Army *army, struct BulletArray *array);

@@ -1,10 +1,12 @@
 #include "enemy.h"
+#include "bullet.h"
 #include "raylib.h"
 #include "sprite.h"
 
 #define MAX(a, b) (a) > (b) ? (a) : (b)
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 Texture2D enemy_texture;
@@ -92,12 +94,20 @@ void UpdateArmy(struct Army *army)
     {
         // Reset the delay
         delay.x = MAX_DELAY;
-    }
+    } 
 
     for (int i = 0; i < army->length; i++)
     {
         if (army->exists[i])
         { 
+            // Lose if the enemies has gotten very low
+            if (army->enemies[i].body.position.y >= 16 * 11)
+            {
+                printf("YOU LOSE!\n");
+
+                return;
+            }
+
             // Animation
             if (army->enemies[i].sprite.src_rect.x == 0)
             {
@@ -151,7 +161,7 @@ void UpdateArmy(struct Army *army)
     if (delay.y == 0)
     {
         delay.y = 2;
-        army->position.y += 0;
+        army->position.y += 1;
         army->direction = MOVE_DOWN;
     }
     // If the position is reaching the end, switch the direction
@@ -168,6 +178,43 @@ void UpdateArmy(struct Army *army)
     {
         army->direction = MOVE_RIGHT;
     } 
+}
+
+void ArmyAttack(struct Army *army, struct BulletArray *array)
+{
+    // Only attack when the delay is over
+    if (delay.x != 0)
+    {
+        return;
+    }
+
+    int index = random() % army->alive;
+    int count = 0;
+
+    for (int i = 0; i < army->length; i++)
+    {
+        if (army->exists[i])
+        {
+            if (count == index)
+            {
+                // Create a bullet
+                struct Bullet bullet = NewBullet();
+                bullet.body.position = army->enemies[i].body.position;
+                bullet.body.position.y += 16;
+
+                // Set the ownership of the bullet to the enemy
+                bullet.owner = true;
+
+                AddBullet(array, bullet);
+
+                return;
+            }
+            else
+            {
+                count++;
+            }
+        }
+    }
 }
 
 void RenderArmy(struct Army *army)

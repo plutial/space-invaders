@@ -25,9 +25,15 @@ CMakeFiles/space-invaders.dir/src/collisions.c.o: /home/plutial/projects/space-i
 CMakeFiles/space-invaders.dir/src/enemy.c.o: /home/plutial/projects/space-invaders/src/enemy.c \
   /home/plutial/projects/space-invaders/raylib/src/raylib.h \
   /home/plutial/projects/space-invaders/src/body.h \
+  /home/plutial/projects/space-invaders/src/bullet.h \
   /home/plutial/projects/space-invaders/src/enemy.h \
   /home/plutial/projects/space-invaders/src/entity.h \
   /home/plutial/projects/space-invaders/src/sprite.h \
+  /usr/include/alloca.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/flt-eval-method.h \
@@ -40,7 +46,15 @@ CMakeFiles/space-invaders.dir/src/enemy.c.o: /home/plutial/projects/space-invade
   /usr/include/bits/mathcalls-helper-functions.h \
   /usr/include/bits/mathcalls-macros.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
   /usr/include/bits/time64.h \
   /usr/include/bits/timesize.h \
   /usr/include/bits/types.h \
@@ -49,10 +63,22 @@ CMakeFiles/space-invaders.dir/src/enemy.c.o: /home/plutial/projects/space-invade
   /usr/include/bits/types/__fpos64_t.h \
   /usr/include/bits/types/__fpos_t.h \
   /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
   /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/sigset_t.h \
   /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
   /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/endian.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
@@ -60,7 +86,10 @@ CMakeFiles/space-invaders.dir/src/enemy.c.o: /home/plutial/projects/space-invade
   /usr/include/math.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
+  /usr/include/stdlib.h \
   /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/types.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h
@@ -132,8 +161,6 @@ space-invaders: /usr/lib/Scrt1.o \
   raylib/raylib/libraylib.a
 
 
-CMakeFiles/space-invaders.dir/src/main.c.o:
-
 CMakeFiles/space-invaders.dir/src/collisions.c.o:
 
 CMakeFiles/space-invaders.dir/src/bullet.c.o:
@@ -146,8 +173,6 @@ CMakeFiles/space-invaders.dir/src/bullet.c.o:
 
 /usr/lib/libmvec.so.1:
 
-/usr/lib/libm.so.6:
-
 /usr/lib/libc.so.6:
 
 /usr/lib/libXdmcp.so.6:
@@ -156,27 +181,73 @@ CMakeFiles/space-invaders.dir/src/bullet.c.o:
 
 /usr/lib/libGLdispatch.so.0:
 
-/usr/lib/libGLX.so:
-
 /usr/lib/libGLU.so:
 
 /usr/lib/ld-linux-x86-64.so.2:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
 
-/usr/include/bits/stdio_lim.h:
+/usr/lib/libm.so:
 
-/usr/lib/libc_nonshared.a:
+/usr/lib/libgcc_s.so.1:
 
-/usr/include/bits/types.h:
+/usr/lib/libgcc_s.so:
 
-/home/plutial/projects/space-invaders/src/collisions.c:
+/usr/lib/libpthread.a:
+
+/usr/lib/libdl.a:
+
+/usr/lib/libOpenGL.so:
+
+/usr/lib/crtn.o:
+
+/usr/lib/crti.o:
+
+/usr/lib/Scrt1.o:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
+
+/home/plutial/projects/space-invaders/src/sprite.c:
 
 /home/plutial/projects/space-invaders/src/player.c:
 
-/usr/include/bits/mathcalls-helper-functions.h:
+/usr/lib/libXau.so.6:
 
-/usr/lib/crti.o:
+/home/plutial/projects/space-invaders/src/player.h:
+
+CMakeFiles/space-invaders.dir/src/sprite.c.o:
+
+/home/plutial/projects/space-invaders/src/main.c:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
+
+/usr/include/sys/types.h:
+
+/usr/lib/libm.so.6:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/math.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+CMakeFiles/space-invaders.dir/src/player.c.o:
+
+/usr/include/features.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/stdio.h:
+
+/usr/include/bits/types/timer_t.h:
 
 /usr/include/bits/long-double.h:
 
@@ -186,15 +257,11 @@ CMakeFiles/space-invaders.dir/src/bullet.c.o:
 
 /usr/include/bits/mathcalls-macros.h:
 
+/usr/include/bits/types/clock_t.h:
+
 /usr/include/bits/libc-header-start.h:
 
 /home/plutial/projects/space-invaders/src/bullet.c:
-
-/usr/include/bits/timesize.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/sys/cdefs.h:
 
 /usr/include/bits/flt-eval-method.h:
 
@@ -202,43 +269,71 @@ CMakeFiles/space-invaders.dir/src/bullet.c.o:
 
 /usr/include/bits/floatn-common.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
-
-/usr/include/bits/types/FILE.h:
-
-CMakeFiles/space-invaders.dir/src/player.c.o:
-
-/usr/include/features.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
-
-/usr/include/math.h:
-
-/usr/include/gnu/stubs.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
-
-/home/plutial/projects/space-invaders/src/sprite.c:
-
 /home/plutial/projects/space-invaders/src/body.h:
 
 /home/plutial/projects/space-invaders/src/entity.h:
 
-/usr/include/bits/time64.h:
+/home/plutial/projects/space-invaders/src/enemy.h:
+
+/usr/include/bits/types/__sigset_t.h:
+
+CMakeFiles/space-invaders.dir/src/main.c.o:
+
+/usr/include/alloca.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/features-time64.h:
+
+/home/plutial/projects/space-invaders/src/sprite.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
 
 /usr/lib/libc.so:
 
 /usr/include/bits/fp-fast.h:
 
-/usr/lib/libOpenGL.so:
+/usr/include/bits/endian.h:
 
-/usr/lib/crtn.o:
+/usr/include/bits/timesize.h:
 
-/home/plutial/projects/space-invaders/src/bullet.h:
+/usr/include/bits/endianness.h:
 
-/home/plutial/projects/space-invaders/src/enemy.h:
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/home/plutial/projects/space-invaders/src/collisions.c:
+
+/usr/lib/libc_nonshared.a:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/math-vector.h:
+
+/home/plutial/projects/space-invaders/raylib/src/raylib.h:
+
+/usr/include/bits/types/__fpos_t.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/bits/time64.h:
 
 /usr/include/bits/mathcalls.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/bits/stdint-intn.h:
 
 raylib/raylib/libraylib.a:
 
@@ -248,54 +343,44 @@ CMakeFiles/space-invaders.dir/src/enemy.c.o:
 
 /home/plutial/projects/space-invaders/src/collisions.h:
 
-/usr/include/bits/math-vector.h:
+/usr/include/bits/stdlib-float.h:
 
-/home/plutial/projects/space-invaders/raylib/src/raylib.h:
+/usr/include/bits/types/sigset_t.h:
 
-/usr/include/bits/types/__fpos_t.h:
+/home/plutial/projects/space-invaders/src/bullet.h:
 
-/usr/include/bits/wordsize.h:
+/usr/include/bits/struct_mutex.h:
 
-/usr/include/bits/libm-simd-decl-stubs.h:
+/usr/include/bits/mathcalls-helper-functions.h:
 
-/usr/include/bits/types/__fpos64_t.h:
+/usr/include/bits/types/time_t.h:
 
-/home/plutial/projects/space-invaders/src/sprite.h:
+/usr/include/bits/struct_rwlock.h:
 
-/usr/include/features-time64.h:
+/usr/include/bits/thread-shared-types.h:
 
 /home/plutial/projects/space-invaders/src/enemy.c:
 
 /usr/include/bits/types/__mbstate_t.h:
 
+/usr/lib/libGLX.so:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/bits/types/clockid_t.h:
+
+/usr/include/endian.h:
+
 /usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/bits/uintn-identity.h:
 
 /usr/include/bits/typesizes.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
-/usr/include/gnu/stubs-64.h:
+/usr/include/bits/types/struct_timespec.h:
 
-/usr/include/stdio.h:
+/usr/include/bits/stdio_lim.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
-
-CMakeFiles/space-invaders.dir/src/sprite.c.o:
-
-/home/plutial/projects/space-invaders/src/main.c:
-
-/usr/lib/libgcc_s.so:
-
-/usr/lib/libXau.so.6:
-
-/home/plutial/projects/space-invaders/src/player.h:
-
-/usr/lib/Scrt1.o:
-
-/usr/lib/libgcc_s.so.1:
-
-/usr/lib/libm.so:
-
-/usr/lib/libdl.a:
-
-/usr/lib/libpthread.a:
+/usr/include/bits/types/struct_timeval.h:
