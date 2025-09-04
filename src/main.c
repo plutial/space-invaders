@@ -15,6 +15,9 @@ int main(void)
     InitWindow(800, 450, "Space Invaders");
     SetWindowState(FLAG_WINDOW_RESIZABLE);
 
+    // Intialize the audio
+    InitAudioDevice();
+
     // Target FPS
     SetTargetFPS(60);
 
@@ -23,9 +26,14 @@ int main(void)
     struct BulletArray bullets = NewBulletArray();
     struct TileArray tiles = NewTileArray();
 
+    // Round, score, and the high score
     int round = 0;
     int score = 0;
     int high_score = 0;
+
+    // Sound effects
+    Sound collision_sound = LoadSound("assets/collision.wav");
+    Sound shoot_sound = LoadSound("assets/shoot.wav");
 
     bool win = false;
     bool lose = false;
@@ -55,7 +63,7 @@ int main(void)
         {
             // Update
             MovePlayer(&player);
-            PlayerAttack(player, &bullets);
+            PlayerAttack(player, &bullets, shoot_sound);
 
             ArmyAttack(&army, &bullets);
 
@@ -66,7 +74,7 @@ int main(void)
             UpdateTiles(&tiles);
 
             // Handle bullet collisions
-            UpdateCollisions(&player, &army, &bullets, &tiles, &lose, &score);
+            UpdateCollisions(&player, &army, &bullets, &tiles, &lose, &score, collision_sound);
         }
         // Restart the game
         else if (lose && IsKeyPressed(KEY_SPACE))
@@ -165,6 +173,12 @@ int main(void)
 
         EndDrawing();
     }
+
+
+    // Unload sounds
+    UnloadSound(collision_sound);
+
+    CloseAudioDevice();
 
     // Close the window
     CloseWindow();

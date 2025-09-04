@@ -26,14 +26,15 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build.
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -59,7 +60,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:STRING=/usr/bin/cc
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -850,9 +851,6 @@ pthread:FILEPATH=/usr/lib/libpthread.a
 //Value Computed by CMake
 raylib_BINARY_DIR:STATIC=/home/plutial/projects/space-invaders/build/raylib/raylib
 
-//The directory containing a CMake configuration file for raylib.
-raylib_DIR:PATH=raylib_DIR-NOTFOUND
-
 //Value Computed by CMake
 raylib_IS_TOP_LEVEL:STATIC=OFF
 
@@ -877,8 +875,6 @@ space-invaders_SOURCE_DIR:STATIC=/home/plutial/projects/space-invaders
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
-//STRINGS property for variable: CMAKE_BUILD_TYPE
-CMAKE_BUILD_TYPE-STRINGS:INTERNAL=Debug;Release;MinSizeRel;RelWithDebInfo
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/plutial/projects/space-invaders/build
 //Major version of cmake used to create the current loaded cache
@@ -1160,8 +1156,8 @@ PKG_FONTCONFIG_STATIC_CFLAGS:INTERNAL=-I/usr/include;-I/usr/include/freetype2;-I
 PKG_FONTCONFIG_STATIC_CFLAGS_I:INTERNAL=
 PKG_FONTCONFIG_STATIC_CFLAGS_OTHER:INTERNAL=-pthread;-DXML_STATIC
 PKG_FONTCONFIG_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include;/usr/include/freetype2;/usr/include/libpng16;/usr/include/harfbuzz;/usr/include/glib-2.0;/usr/lib/glib-2.0/include;/usr/include/sysprof-6
-PKG_FONTCONFIG_STATIC_LDFLAGS:INTERNAL=-L/usr/lib;-lfontconfig;-pthread;-lm;-lfreetype;-lbz2;-lpng16;-lm;-lm;-lz;-lharfbuzz;-pthread;-lm;-lglib-2.0;-lm;-lsysprof-capture-4;-pthread;-lpcre2-8;-lgraphite2;-lbrotlidec;-lbrotlicommon;-lexpat;-lm
-PKG_FONTCONFIG_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-pthread
+PKG_FONTCONFIG_STATIC_LDFLAGS:INTERNAL=-L/usr/lib;-lfontconfig;-pthread;-lm;-lfreetype;-lbz2;-lpng16;-lm;-lm;-lz;-lharfbuzz;-pthread;-lm;-lglib-2.0;-lm;-lsysprof-capture-4;-Wl,-z,nodelete;-pthread;-lpcre2-8;-lgraphite2;-lbrotlidec;-lbrotlicommon;-lexpat;-lm
+PKG_FONTCONFIG_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread;-Wl,-z,nodelete;-pthread
 PKG_FONTCONFIG_STATIC_LIBDIR:INTERNAL=
 PKG_FONTCONFIG_STATIC_LIBRARIES:INTERNAL=fontconfig;m;freetype;bz2;png16;m;m;z;harfbuzz;m;glib-2.0;m;sysprof-capture-4;pcre2-8;graphite2;brotlidec;brotlicommon;expat;m
 PKG_FONTCONFIG_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib

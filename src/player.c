@@ -62,7 +62,7 @@ void UpdatePlayer(struct Entity *player)
 }
 
 int attack_delay = 0;
-void PlayerAttack(struct Entity player, struct BulletArray *bullets)
+void PlayerAttack(struct Entity player, struct BulletArray *bullets, Sound shoot_sound)
 {
     // The delay for each attack
     attack_delay = MAX(0, attack_delay - 1);
@@ -80,6 +80,9 @@ void PlayerAttack(struct Entity player, struct BulletArray *bullets)
         bullet.body.position = player.body.position;
 
         AddBullet(bullets, bullet);
+
+        // Sound effect
+        PlaySound(shoot_sound);
 
         // Start delay
         // The value is the number of frames

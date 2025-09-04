@@ -6,3 +6,6 @@ run:
 	cmake -S . -B build
 	cmake --build build
 	./build/space-invaders
+
+clean:
+	rm -rf build

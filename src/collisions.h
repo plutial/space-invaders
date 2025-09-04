@@ -5,4 +5,4 @@
 #include "bullet.h"
 #include "tile.h"
 
-void UpdateCollisions(struct Entity *player, struct Army *army, struct BulletArray *bullets, struct TileArray *tiles, bool *lose, int *score);
+void UpdateCollisions(struct Entity *player, struct Army *army, struct BulletArray *bullets, struct TileArray *tiles, bool *lose, int *score, Sound sound);

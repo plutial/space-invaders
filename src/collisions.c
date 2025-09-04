@@ -1,6 +1,7 @@
 #include "collisions.h"
 
 #include "body.h"
+#include "raylib.h"
 #include <math.h>
 
 // Returns true if the bodies collided, and false for no collision
@@ -96,7 +97,7 @@ bool UpdateEnemyCollisions(struct BulletArray *bullets, int bullet_index, struct
 }
 
 // Update bullet collisions
-void UpdateCollisions(struct Entity *player, struct Army *army, struct BulletArray *bullets, struct TileArray *tiles, bool *lose, int *score)
+void UpdateCollisions(struct Entity *player, struct Army *army, struct BulletArray *bullets, struct TileArray *tiles, bool *lose, int *score, Sound collision_sound)
 {
     for (int i = 0; i < bullets->capacity; i++)
     {
@@ -106,6 +107,7 @@ void UpdateCollisions(struct Entity *player, struct Army *army, struct BulletArr
 
             if (collision)
             {
+                PlaySound(collision_sound);
                 continue;
             }
 
@@ -117,6 +119,7 @@ void UpdateCollisions(struct Entity *player, struct Army *army, struct BulletArr
 
                 if (collision)
                 {
+                    PlaySound(collision_sound);
                     continue;
                 }
             }
@@ -128,6 +131,8 @@ void UpdateCollisions(struct Entity *player, struct Army *army, struct BulletArr
                 // If the player gets hit by an enemy bullet, the player loses
                 if (collision)
                 {
+                    PlaySound(collision_sound);
+
                     *lose = true;
                 }
             }
