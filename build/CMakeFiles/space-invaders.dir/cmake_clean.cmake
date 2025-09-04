@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/space-invaders.dir/src/player.c.o.d"
   "CMakeFiles/space-invaders.dir/src/sprite.c.o"
   "CMakeFiles/space-invaders.dir/src/sprite.c.o.d"
+  "CMakeFiles/space-invaders.dir/src/tile.c.o"
+  "CMakeFiles/space-invaders.dir/src/tile.c.o.d"
   "space-invaders"
   "space-invaders.pdb"
 )

@@ -54,8 +54,15 @@ void MovePlayer(struct Entity *player)
     }
 }
 
+void UpdatePlayer(struct Entity *player)
+{
+    // Update sprite position
+    player->sprite.dst_rect.x = player->body.position.x;
+    player->sprite.dst_rect.y = player->body.position.y;
+}
+
 int attack_delay = 0;
-void PlayerAttack(struct Entity player, struct BulletArray *array)
+void PlayerAttack(struct Entity player, struct BulletArray *bullets)
 {
     // The delay for each attack
     attack_delay = MAX(0, attack_delay - 1);
@@ -72,7 +79,7 @@ void PlayerAttack(struct Entity player, struct BulletArray *array)
         struct Bullet bullet = NewBullet(); 
         bullet.body.position = player.body.position;
 
-        AddBullet(array, bullet);
+        AddBullet(bullets, bullet);
 
         // Start delay
         // The value is the number of frames

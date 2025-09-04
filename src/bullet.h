@@ -25,6 +25,6 @@ struct BulletArray
 
 struct Bullet NewBullet();
 struct BulletArray NewBulletArray();
-void AddBullet(struct BulletArray *array, struct Bullet bullet);
-void UpdateBullets(struct BulletArray *array);
-void RenderBullets(struct BulletArray *array);
+void AddBullet(struct BulletArray *bullets, struct Bullet bullet);
+void UpdateBullets(struct BulletArray *bullets);
+void RenderBullets(struct BulletArray *bullets);

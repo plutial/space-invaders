@@ -35,30 +35,30 @@ struct Bullet NewBullet()
 
 struct BulletArray NewBulletArray()
 {
-    struct BulletArray array;
+    struct BulletArray bullets;
 
-    array.capacity = 100;
+    bullets.capacity = 100;
 
-    // Reset the arrays
-    for (int i = 0; i < array.capacity; i++)
+    // Reset the bulletss
+    for (int i = 0; i < bullets.capacity; i++)
     {
-        array.bullets[i] = (struct Bullet) {};
-        array.exists[i] = false;
+        bullets.bullets[i] = (struct Bullet) {};
+        bullets.exists[i] = false;
     }
 
-    return array;
+    return bullets;
 }
 
-void AddBullet(struct BulletArray *array, struct Bullet bullet)
+void AddBullet(struct BulletArray *bullets, struct Bullet bullet)
 {
-    // If the array is full, don't add the bullet
-    for (int i = 0; i < array->capacity; i++)
+    // If the bullets is full, don't add the bullet
+    for (int i = 0; i < bullets->capacity; i++)
     {
         // Check for an empty space
-        if (!array->exists[i])
+        if (!bullets->exists[i])
         {
-            array->bullets[i] = bullet;
-            array->exists[i] = true;
+            bullets->bullets[i] = bullet;
+            bullets->exists[i] = true;
 
             // Stop here
             return;
@@ -66,47 +66,47 @@ void AddBullet(struct BulletArray *array, struct Bullet bullet)
     }
 }
 
-void UpdateBullets(struct BulletArray *array)
+void UpdateBullets(struct BulletArray *bullets)
 {
-    for (int i = 0; i < array->capacity; i++)
+    for (int i = 0; i < bullets->capacity; i++)
     {
-        if (array->exists[i])
+        if (bullets->exists[i])
         {
             // Move the body up
             float speed = 3.0f;
 
             // If the player owns the bullet, go up to attack the enemy
-            if (!array->bullets[i].owner)
+            if (!bullets->bullets[i].owner)
             {
-                array->bullets[i].body.position.y -= speed;
+                bullets->bullets[i].body.position.y -= speed;
             }
             // If the enemy own the bullet, go down to attack the player
             else
             {
-                array->bullets[i].body.position.y += speed;
+                bullets->bullets[i].body.position.y += speed;
             }
 
             // Update the position of the sprite
-            array->bullets[i].sprite.dst_rect.x = array->bullets[i].body.position.x;
-            array->bullets[i].sprite.dst_rect.y = array->bullets[i].body.position.y;
+            bullets->bullets[i].sprite.dst_rect.x = bullets->bullets[i].body.position.x;
+            bullets->bullets[i].sprite.dst_rect.y = bullets->bullets[i].body.position.y;
 
             // Remove the bullet if the bullet leaves the screen
-            if (array->bullets[i].body.position.y + array->bullets[i].body.size.y < 0)
+            if (bullets->bullets[i].body.position.y + bullets->bullets[i].body.size.y < 0)
             {
-                array->exists[i] = false;
+                bullets->exists[i] = false;
             }
         }
     }
 }
 
 
-void RenderBullets(struct BulletArray *array)
+void RenderBullets(struct BulletArray *bullets)
 {
-    for (int i = 0; i < array->capacity; i++)
+    for (int i = 0; i < bullets->capacity; i++)
     {
-        if (array->exists[i])
+        if (bullets->exists[i])
         {
-            RenderSprite(array->bullets[i].sprite);
+            RenderSprite(bullets->bullets[i].sprite);
         }
     }
 }

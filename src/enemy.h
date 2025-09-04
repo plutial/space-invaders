@@ -30,9 +30,13 @@ struct Army
     // Position
     Vector2 position;
     enum Direction direction;
+
+    // The delay between updates
+    Vector2 delay;
+    int max_delay;
 };
 
 struct Army NewArmy();
-void UpdateArmy(struct Army *army);
+void UpdateArmy(struct Army *army, bool *win, bool *lose);
 void RenderArmy(struct Army *army);
 void ArmyAttack(struct Army *army, struct BulletArray *array);

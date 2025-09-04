@@ -14,6 +14,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Requires C11 standard
 set(CMAKE_C_STANDARD 11)
 
+# Flags 
+SET(COMPILE_FLAGS   "-Wall -Wextra -fsanitize=address")
+SET(LINK_FLAGS      "-Wall -Wextra -fsanitize=address")
+
+SET(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${COMPILE_FLAGS}")
+SET(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${LINK_FLAGS}")
+
 # Source files
 file(GLOB SOURCE_FILES "src/*.c")
 

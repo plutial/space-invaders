@@ -377,6 +377,30 @@ src/sprite.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/sprite.c.s
 .PHONY : src/sprite.c.s
 
+src/tile.o: src/tile.c.o
+.PHONY : src/tile.o
+
+# target to build an object file
+src/tile.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/tile.c.o
+.PHONY : src/tile.c.o
+
+src/tile.i: src/tile.c.i
+.PHONY : src/tile.i
+
+# target to preprocess a source file
+src/tile.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/tile.c.i
+.PHONY : src/tile.c.i
+
+src/tile.s: src/tile.c.s
+.PHONY : src/tile.s
+
+# target to generate assembly for a file
+src/tile.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/space-invaders.dir/build.make CMakeFiles/space-invaders.dir/src/tile.c.s
+.PHONY : src/tile.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -413,6 +437,9 @@ help:
 	@echo "... src/sprite.o"
 	@echo "... src/sprite.i"
 	@echo "... src/sprite.s"
+	@echo "... src/tile.o"
+	@echo "... src/tile.i"
+	@echo "... src/tile.s"
 .PHONY : help
 
 

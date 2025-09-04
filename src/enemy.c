@@ -5,7 +5,6 @@
 
 #define MAX(a, b) (a) > (b) ? (a) : (b)
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
@@ -24,6 +23,10 @@ struct Army NewArmy()
     army.width = 11;
     army.height = 5;
     army.length = army.width * army.height;
+
+    // Delay
+    army.max_delay = 35;
+    army.delay = (Vector2) {army.max_delay, 1};
 
     // There are 55 enemies alive at initialization
     army.alive = army.length;
@@ -80,20 +83,26 @@ struct Army NewArmy()
     return army;
 }
 
-#define MAX_DELAY 35
-Vector2 delay = {MAX_DELAY, 1};
-void UpdateArmy(struct Army *army)
+void UpdateArmy(struct Army *army, bool *win, bool *lose)
 {  
-    // Only update when the delay is over
-    if (delay.x != 0)
+    // If there are no more enemies, the player wins
+    if (army->alive == 0)
     {
-        delay.x = MAX(0, delay.x - 1);
+        *win = true;
+
+        return;
+    }
+
+    // Only update when the delay is over
+    if (army->delay.x != 0)
+    {
+        army->delay.x = MAX(0, army->delay.x - 1);
         return;
     } 
     else
     {
         // Reset the delay
-        delay.x = MAX_DELAY;
+        army->delay.x = army->max_delay;
     } 
 
     for (int i = 0; i < army->length; i++)
@@ -103,7 +112,7 @@ void UpdateArmy(struct Army *army)
             // Lose if the enemies has gotten very low
             if (army->enemies[i].body.position.y >= 16 * 11)
             {
-                printf("YOU LOSE!\n");
+                *lose = true;
 
                 return;
             }
@@ -154,13 +163,13 @@ void UpdateArmy(struct Army *army)
 
     if (((int) army->position.x) % length == 0)
     {
-        delay.y -= 1;
+        army->delay.y -= 1;
     }
 
     // Move the enemies down
-    if (delay.y == 0)
+    if (army->delay.y == 0)
     {
-        delay.y = 2;
+        army->delay.y = 2;
         army->position.y += 1;
         army->direction = MOVE_DOWN;
     }
@@ -180,10 +189,16 @@ void UpdateArmy(struct Army *army)
     } 
 }
 
-void ArmyAttack(struct Army *army, struct BulletArray *array)
+void ArmyAttack(struct Army *army, struct BulletArray *bullets)
 {
     // Only attack when the delay is over
-    if (delay.x != 0)
+    if (army->delay.x != 0)
+    {
+        return;
+    }
+
+    // If there are no enemies, stop the attack
+    if (army->alive == 0)
     {
         return;
     }
@@ -205,7 +220,7 @@ void ArmyAttack(struct Army *army, struct BulletArray *array)
                 // Set the ownership of the bullet to the enemy
                 bullet.owner = true;
 
-                AddBullet(array, bullet);
+                AddBullet(bullets, bullet);
 
                 return;
             }
@@ -219,6 +234,12 @@ void ArmyAttack(struct Army *army, struct BulletArray *array)
 
 void RenderArmy(struct Army *army)
 {
+    // If there are no enemies, don't render
+    if (army->alive == 0)
+    {
+        return;
+    }
+
     for (int i = 0; i < army->length; i++)
     {
         if (army->exists[i])
