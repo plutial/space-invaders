@@ -1,2 +1,20 @@
 # Hashes of file build rules.
-daaa0e443d30bffc83c1bf41c2ae92c7 raylib/raylib/external/glfw/src/CMakeFiles/update_mappings
+3ab9472910a0433ffda64405bcc807f3 raylib/raylib/external/glfw/src/CMakeFiles/update_mappings
+03669b3e5e9cd5b1d0e75f3be5ea88fa raylib/raylib/external/glfw/src/fractional-scale-v1-client-protocol-code.h
+176e878f96f5785bfe89d782d7a4e5ba raylib/raylib/external/glfw/src/fractional-scale-v1-client-protocol.h
+4ca25e4cfef2bbffeee41814667f0321 raylib/raylib/external/glfw/src/idle-inhibit-unstable-v1-client-protocol-code.h
+24003f4fd9de4cce69e4bccfd641dc4a raylib/raylib/external/glfw/src/idle-inhibit-unstable-v1-client-protocol.h
+f22f9ec55f39489b040e3cc519fd333a raylib/raylib/external/glfw/src/pointer-constraints-unstable-v1-client-protocol-code.h
+83afee80ef60113cc97e6e242e06d5e3 raylib/raylib/external/glfw/src/pointer-constraints-unstable-v1-client-protocol.h
+d6dac34ec06d3359d86c0842e7164b85 raylib/raylib/external/glfw/src/relative-pointer-unstable-v1-client-protocol-code.h
+2f23a00e30ed69ba251639b6e7b8ebef raylib/raylib/external/glfw/src/relative-pointer-unstable-v1-client-protocol.h
+90c84b37c4a90be0f1d0e53f6290b4cc raylib/raylib/external/glfw/src/viewporter-client-protocol-code.h
+88eed9ba3f9a49f31b76cdae7862a8cd raylib/raylib/external/glfw/src/viewporter-client-protocol.h
+797a5f5f42744f21fdf6b1a04c83a861 raylib/raylib/external/glfw/src/wayland-client-protocol-code.h
+5a24c13c50ee0397bab31ed098ee86c1 raylib/raylib/external/glfw/src/wayland-client-protocol.h
+819422f03a957d931fbe6c862de44b36 raylib/raylib/external/glfw/src/xdg-activation-v1-client-protocol-code.h
+97cadba58e289644f6d1f26a3ebefa9d raylib/raylib/external/glfw/src/xdg-activation-v1-client-protocol.h
+0e2aa1c4aebe4ae08dd0a5162a571b0b raylib/raylib/external/glfw/src/xdg-decoration-unstable-v1-client-protocol-code.h
+db89e6c86d37175590b3044c60fc2048 raylib/raylib/external/glfw/src/xdg-decoration-unstable-v1-client-protocol.h
+579e59da1fee6196c496702b06f67487 raylib/raylib/external/glfw/src/xdg-shell-client-protocol-code.h
+9808e289a43023d9ed723896e8e1cbe5 raylib/raylib/external/glfw/src/xdg-shell-client-protocol.h

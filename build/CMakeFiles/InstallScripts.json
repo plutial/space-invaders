@@ -1,11 +1,11 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/plutial/projects/space-invaders/build/cmake_install.cmake",
-		"/home/plutial/projects/space-invaders/build/raylib/cmake_install.cmake",
-		"/home/plutial/projects/space-invaders/build/raylib/raylib/cmake_install.cmake",
-		"/home/plutial/projects/space-invaders/build/raylib/raylib/external/glfw/cmake_install.cmake",
-		"/home/plutial/projects/space-invaders/build/raylib/raylib/external/glfw/src/cmake_install.cmake"
+		"/home/plutial/Projects/space-invaders/build/cmake_install.cmake",
+		"/home/plutial/Projects/space-invaders/build/raylib/cmake_install.cmake",
+		"/home/plutial/Projects/space-invaders/build/raylib/raylib/cmake_install.cmake",
+		"/home/plutial/Projects/space-invaders/build/raylib/raylib/external/glfw/cmake_install.cmake",
+		"/home/plutial/Projects/space-invaders/build/raylib/raylib/external/glfw/src/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
 
+# Wayland
+SET(GLFW_BUILD_WAYLAND ON)
+
 # Project name
 project(space-invaders)
 
